@@ -7,15 +7,15 @@ COPY . .
 RUN npm run build --prod 
 
 FROM nginx:latest
-WORKDIR /environmentSetup/nginxcfg/html
+WORKDIR /environmentSetup/niginx/html
 
 RUN rm -rf ./*
 
-COPY --from=builder /usr/myProject/xama-admin/dist/xama-admin /environmentSetup/nginxcfg/html
+COPY --from=builder /usr/myProject/xama-admin/dist/xama-admin /environmentSetup/niginx/html
 
 # FROM nginx:latest
-# WORKDIR /environmentSetup/nginxcfg/html
+# WORKDIR /environmentSetup/niginx/html
 
 # RUN rm -rf ./*
 
-# COPY /usr/myProject/xama-admin /environmentSetup/nginxcfg/html
+# COPY /usr/myProject/xama-admin /environmentSetup/niginx/html
