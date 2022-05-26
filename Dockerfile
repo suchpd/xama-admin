@@ -13,6 +13,7 @@ RUN rm -rf ./*
 
 COPY --from=builder /usr/myProject/xama-admin/dist/xama-admin /environmentSetup/niginx/html
 
+
 # FROM nginx:latest
 # WORKDIR /environmentSetup/niginx/html
 
